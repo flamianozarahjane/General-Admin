@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zarah Flamiano — General Virtual Assistant | Data Entry &amp; Document Organization</title>
+<meta name="description" content="Portfolio of Zarah Flamiano — General Virtual Assistant specializing in accurate data entry, document control, online research, and Excel / Google Sheets reporting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10211c;
+  --ink-soft:#4a5d57;
+  --paper:#f7f6f1;
+  --card:#ffffff;
+  --line:#e2e0d6;
+  --accent:#0f6b52;      /* deep teal-green */
+  --accent-soft:#e6f2ee;
+  --amber:#c2721c;       /* highlight accent */
+  --shadow:0 2px 4px rgba(16,33,28,.04), 0 12px 28px rgba(16,33,28,.07);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.65;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{font-family:'Sora',sans-serif;line-height:1.25;letter-spacing:-.02em}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+
+/* ---------- NAV ---------- */
+nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(247,246,241,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:'Sora',sans-serif;font-weight:700;font-size:1.02rem}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;gap:26px;font-size:.9rem;font-weight:500}
+.nav-links a{color:var(--ink-soft)}
+.nav-links a:hover{color:var(--accent);text-decoration:none}
+@media(max-width:780px){.nav-links{display:none}}
+
+/* ---------- HERO ---------- */
+header{padding:76px 0 64px;border-bottom:1px solid var(--line)}
+.eyebrow{
+  display:inline-block;font-size:.74rem;font-weight:600;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--accent);
+  background:var(--accent-soft);padding:7px 14px;border-radius:99px;margin-bottom:22px;
+}
+header h1{font-size:2.9rem;margin-bottom:8px}
+@media(max-width:640px){header h1{font-size:2.1rem}}
+.role{font-family:'Sora',sans-serif;font-size:1.22rem;color:var(--amber);font-weight:600;margin-bottom:20px}
+.lede{font-size:1.06rem;color:var(--ink-soft);max-width:660px;margin-bottom:14px}
+.avail{font-size:.93rem;color:var(--ink-soft);margin-bottom:30px}
+.avail strong{color:var(--ink)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;padding:13px 26px;border-radius:9px;font-weight:600;font-size:.94rem;
+  transition:.18s ease;
+}
+.btn-main{background:var(--accent);color:#fff}
+.btn-main:hover{background:#0b5440;text-decoration:none;transform:translateY(-1px)}
+.btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+/* ---------- STRIP ---------- */
+.strip{background:var(--ink);color:#fff;padding:26px 0}
+.strip-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;text-align:center}
+.strip .n{font-family:'Sora',sans-serif;font-size:1.5rem;font-weight:700;display:block}
+.strip .l{font-size:.78rem;opacity:.72;letter-spacing:.04em}
+@media(max-width:700px){.strip-grid{grid-template-columns:repeat(2,1fr);gap:20px}}
+
+/* ---------- SECTIONS ---------- */
+section{padding:66px 0;border-bottom:1px solid var(--line)}
+.s-label{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:10px}
+section h2{font-size:1.85rem;margin-bottom:12px}
+.s-intro{color:var(--ink-soft);max-width:680px;margin-bottom:36px}
+
+/* ---------- FIT TABLE ---------- */
+.fit{width:100%;border-collapse:collapse;background:var(--card);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);font-size:.93rem}
+.fit th{
+  background:var(--accent);color:#fff;text-align:left;padding:14px 18px;
+  font-family:'Sora',sans-serif;font-size:.84rem;letter-spacing:.03em;font-weight:600;
+}
+.fit td{padding:14px 18px;border-top:1px solid var(--line);vertical-align:top}
+.fit td:first-child{font-weight:600;width:42%;color:var(--ink)}
+.fit td:last-child{color:var(--ink-soft)}
+@media(max-width:700px){
+  .fit thead{display:none}
+  .fit tr{display:block;border-top:1px solid var(--line)}
+  .fit td{display:block;border:none;padding:10px 16px}
+  .fit td:first-child{width:100%;padding-bottom:2px}
+  .fit td:last-child{padding-top:0;padding-bottom:16px}
+}
+
+/* ---------- CARDS ---------- */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  padding:26px;box-shadow:var(--shadow);transition:.2s ease;
+}
+.card:hover{transform:translateY(-3px);border-color:#cfd8d4}
+.card h3{font-size:1.08rem;margin-bottom:9px}
+.card p{font-size:.93rem;color:var(--ink-soft)}
+.icon{
+  width:40px;height:40px;border-radius:10px;background:var(--accent-soft);color:var(--accent);
+  display:flex;align-items:center;justify-content:center;font-size:1.15rem;margin-bottom:14px;
+}
+
+/* ---------- EXHIBITS ---------- */
+.ex{
+  background:var(--card);border:1px solid var(--line);border-radius:14px;
+  overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.ex-thumb{
+  aspect-ratio:16/9;background:linear-gradient(135deg,#0f6b52,#134e42);
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  font-family:'Sora',sans-serif;font-weight:600;font-size:.95rem;text-align:center;padding:18px;
+}
+.ex-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.ex-body{padding:22px;flex:1;display:flex;flex-direction:column}
+.tag{
+  display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--amber);margin-bottom:8px;
+}
+.ex-body h3{font-size:1.05rem;margin-bottom:8px}
+.ex-body p{font-size:.9rem;color:var(--ink-soft);margin-bottom:14px}
+.ex-list{list-style:none;font-size:.87rem;color:var(--ink-soft);margin-bottom:16px}
+.ex-list li{padding-left:18px;position:relative;margin-bottom:5px}
+.ex-list li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+.watch{
+  margin-top:auto;display:inline-block;font-size:.87rem;font-weight:600;
+  padding:9px 16px;border:1.5px solid var(--accent);border-radius:8px;text-align:center;
+}
+.watch:hover{background:var(--accent);color:#fff;text-decoration:none}
+
+/* ---------- TOOLS ---------- */
+.tool-group{margin-bottom:24px}
+.tool-group h4{font-size:.88rem;color:var(--ink);margin-bottom:10px;letter-spacing:.02em}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  background:var(--card);border:1px solid var(--line);border-radius:7px;
+  padding:7px 13px;font-size:.85rem;color:var(--ink-soft);
+}
+
+/* ---------- SETUP ---------- */
+.setup{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.setup-item{background:var(--card);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:18px 20px}
+.setup-item strong{display:block;font-family:'Sora',sans-serif;font-size:.95rem;margin-bottom:4px}
+.setup-item span{font-size:.88rem;color:var(--ink-soft)}
+
+/* ---------- TIMELINE ---------- */
+.tl{border-left:2px solid var(--line);padding-left:26px;margin-left:6px}
+.tl-item{position:relative;padding-bottom:28px}
+.tl-item::before{
+  content:"";position:absolute;left:-33px;top:6px;width:11px;height:11px;
+  border-radius:50%;background:var(--accent);border:2.5px solid var(--paper);
+}
+.tl-item h3{font-size:1.02rem}
+.tl-date{font-size:.8rem;color:var(--amber);font-weight:600;margin-bottom:5px}
+.tl-item p{font-size:.91rem;color:var(--ink-soft)}
+.tl-item p:first-of-type{font-weight:600;color:var(--ink);font-size:.88rem;margin-bottom:4px}
+
+/* ---------- CONTACT ---------- */
+.contact{background:var(--ink);color:#fff;border:none}
+.contact h2{color:#fff}
+.contact .s-intro{color:rgba(255,255,255,.72)}
+.contact .s-label{color:#e8b06a}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;margin-bottom:34px}
+.cbox{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:20px}
+.cbox span{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-bottom:6px}
+.cbox a,.cbox p{color:#fff;font-size:.95rem;font-weight:500;word-break:break-word}
+footer{padding:26px 0;text-align:center;font-size:.83rem;color:var(--ink-soft)}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <div class="brand">Zarah <span>Flamiano</span></div>
+    <div class="nav-links">
+      <a href="#fit">Role Fit</a>
+      <a href="#audit">Audit Record</a>
+      <a href="#strengths">Strengths</a>
+      <a href="#work">Work Samples</a>
+      <a href="#tools">Tools</a>
+      <a href="#setup">Setup</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header>
+  <div class="wrap">
+    <div class="eyebrow">Application Portfolio</div>
+    <h1>Data that stays clean, current, and correct.</h1>
+    <div class="role">General Virtual Assistant — Data Entry, Document Control &amp; Research</div>
+    <p class="lede">
+      I'm Zarah, a documentation and compliance specialist. For seven years I controlled an entire site's
+      documentation system — every procedure, work instruction and form, issued, revised, distributed and withdrawn
+      with a full version history — and produced any record an auditor asked for, on the spot. That's the same
+      discipline this role runs on: enter it right, file it so anyone can find it, check it against the source,
+      and flag what doesn't add up before someone else has to.
+    </p>
+    <p class="avail">
+      <strong>Available:</strong> Full-time, 8 hrs/day &middot; 5 days/week &nbsp;|&nbsp;
+      <strong>Overlap:</strong> Flexible to US business hours &nbsp;|&nbsp;
+      <strong>Based:</strong> Philippines
+    </p>
+    <div class="btns">
+      <a class="btn btn-main" href="https://drive.google.com/file/d/1E4c4GDywJcS0-rCrFZU8L2uOc3ILyDF_/view?usp=sharing" target="_blank" rel="noopener">View CV</a>
+      <a class="btn btn-ghost" href="#work">See Work Samples</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= STRIP ================= -->
+<div class="strip">
+  <div class="wrap strip-grid">
+    <div><span class="n">~10</span><span class="l">Audits supported per year</span></div>
+    <div><span class="n">Zero</span><span class="l">Audit findings on my records</span></div>
+    <div><span class="n">15+</span><span class="l">Years controlling records</span></div>
+    <div><a href="#work" style="color:inherit;text-decoration:none"><span class="n">3</span><span class="l">Work samples with video walkthroughs</span></a></div>
+  </div>
+</div>
+
+<!-- ================= ROLE FIT ================= -->
+<section id="fit">
+  <div class="wrap">
+    <div class="s-label">Role Fit</div>
+    <h2>Your requirements, matched line by line</h2>
+    <p class="s-intro">
+      Rather than ask you to read between the lines of a résumé, here's a direct map of what the post asks for
+      against what I've actually done.
+    </p>
+    <table class="fit">
+      <thead>
+        <tr><th>What the role requires</th><th>What I bring to it</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Accurate data entry; keep spreadsheets, databases, trackers and records up to date</td>
+          <td>Maintained the site document register — every procedure, work instruction and form logged with its revision number, issue date, distribution list and status. Updated the same day a change was approved, never in a backlog.</td>
+        </tr>
+        <tr>
+          <td>Organize, clean, review and maintain files and documents for accuracy and completeness</td>
+          <td>Ran the full document control lifecycle: issue, revision, controlled distribution and withdrawal of superseded copies, with complete version history retained for audit inspection.</td>
+        </tr>
+        <tr>
+          <td>Online research on companies, people and topics; summarize findings clearly</td>
+          <td>Regularly researched standards, regulatory references and supplier/certification details across public sources, then summarized findings into a short, decision-ready note for managers and auditors.</td>
+        </tr>
+        <tr>
+          <td>Create, update and format Excel, Google Sheets, Word, Google Docs, PowerPoint</td>
+          <td>Build trackers from scratch — formulas, data validation, conditional formatting, pivot summaries — plus SOP documents and management decks.</td>
+        </tr>
+        <tr>
+          <td>Transfer and organize information across documents, systems and folders</td>
+          <td>Routine work migrating records between systems, spreadsheets and shared drives with reconciliation checks so nothing is dropped or duplicated.</td>
+        </tr>
+        <tr>
+          <td>Follow detailed instructions; flag missing, incorrect or inconsistent information</td>
+          <td>Flagging gaps <em>is</em> document control. I logged every discrepancy and audit observation, raised it with the named owner and the exact document reference, and tracked each corrective action through to verified closure.</td>
+        </tr>
+        <tr>
+          <td>General admin support — email, document organization, ad hoc projects</td>
+          <td>Inbox coordination, filing structures, recurring status reports and persistent follow-up with document owners across departments.</td>
+        </tr>
+        <tr>
+          <td>Reliable, independent, confidential, fast internet</td>
+          <td>Wired fiber with a backup connection, two laptops, dual monitors and a battery backup. Years of handling confidential procedures, audit findings and employee records.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ================= AUDIT ================= -->
+<section id="audit">
+  <div class="wrap">
+    <div class="s-label">Audit Record</div>
+    <h2>What I'm actually known for</h2>
+    <p class="s-intro">
+      In regulated food manufacturing the documentation is the evidence. If a record is missing, out of date or
+      can't be produced within minutes, that's a finding. Keeping that from happening was my job.
+    </p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">📁</div>
+        <h3>Owned the site documentation system</h3>
+        <p>Issue, revision, distribution and withdrawal of every procedure, work instruction and form — with full version history maintained so any revision could be traced back on demand.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⏱</div>
+        <h3>Produced records on demand</h3>
+        <p>Retrieved controlled documents and compliance records live during internal and external audits, while the auditor was sitting there — not after a scramble through folders.</p>
+      </div>
+      <div class="card">
+        <div class="icon">↻</div>
+        <h3>Closed every corrective action</h3>
+        <p>Tracked corrective actions from the moment they were raised to verified closure, with the owner, evidence and date logged against each one.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🗂</div>
+        <h3>Kept evidence packs audit-ready</h3>
+        <p>Assembled and maintained evidence packs for roughly ten audits a year — social compliance, food safety certification, ISO 14001, customer audits, internal IMS audits and regulatory inspections.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Zero findings on records I owned</h3>
+        <p>Across that audit load, the records under my control returned no findings. Not luck — the result of checking completeness before anyone external asked.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔄</div>
+        <h3>Carried it into digital</h3>
+        <p>Most recently led the digitization of 40+ production and quality documents remotely for a US company, rebuilding retrieval, traceability and version control in Excel, Power BI and Power Automate.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STRENGTHS ================= -->
+<section id="strengths">
+  <div class="wrap">
+    <div class="s-label">How I Work</div>
+    <h2>Six habits that keep your records trustworthy</h2>
+    <p class="s-intro">These aren't adjectives from a résumé — they're the working methods I'd bring on day one.</p>
+    <div class="grid">
+      <div class="card">
+        <div class="icon">✓</div>
+        <h3>Verify against the source</h3>
+        <p>Every entry traces back to a document, email, or system record. If I can't source it, I flag it instead of guessing.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⌗</div>
+        <h3>Consistent naming and structure</h3>
+        <p>Files and folders follow one convention so anyone on the team can find a record without asking me where it is.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚑</div>
+        <h3>Flag early, not later</h3>
+        <p>Missing fields, mismatched totals, duplicate records — surfaced the same day with the exact reference, not buried.</p>
+      </div>
+      <div class="card">
+        <div class="icon">↻</div>
+        <h3>Recurring tasks run on schedule</h3>
+        <p>Daily and weekly updates happen without a reminder. You should never have to ask whether the tracker is current.</p>
+      </div>
+      <div class="card">
+        <div class="icon">✎</div>
+        <h3>Clear written summaries</h3>
+        <p>Research comes back as findings and a recommendation — not a pile of links for you to sort through.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔒</div>
+        <h3>Confidentiality by default</h3>
+        <p>Years of handling employee records, audit findings, and internal data. Access stays limited to what the task needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WORK SAMPLES ================= -->
+<section id="work">
+  <div class="wrap">
+    <div class="s-label">Work Samples</div>
+    <h2>Tools I built and how I use them</h2>
+    <p class="s-intro">
+      Short walkthroughs of systems I built to keep records complete and audit-ready. The subject matter is compliance, but what you're looking at is the data entry, file structure and follow-up discipline behind it.
+    </p>
+    <div class="grid">
+
+      <!-- Exhibit A -->
+      <div class="ex">
+        <div class="ex-thumb">
+          <!-- Replace with: <img src="images/exhibit-a.jpg" alt="Governance &amp; Training Compliance Control Tower"> -->
+          Exhibit A — Compliance Control Tower
+        </div>
+        <div class="ex-body">
+          <span class="tag">Data Entry &amp; Tracking</span>
+          <h3>Compliance Control Tower</h3>
+          <p>The Excel system I built to hold the live status of every controlled document in one place — owner, version, review date, and what's overdue or missing.</p>
+          <ul class="ex-list">
+            <li>Data validation lists so entries stay consistent</li>
+            <li>Conditional formatting for due and overdue items</li>
+            <li>Auto-summary panel ready for management reporting</li>
+          </ul>
+          <a class="watch" href="https://youtu.be/WFsZLxKe2pI" target="_blank" rel="noopener">Watch walkthrough &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Exhibit B -->
+      <div class="ex">
+        <div class="ex-thumb">
+          <!-- Replace with: <img src="images/exhibit-b.jpg" alt="Automating four repetitive governance tasks"> -->
+          Exhibit B — Automating Recurring Work
+        </div>
+        <div class="ex-body">
+          <span class="tag">Recurring Tasks &amp; Accuracy</span>
+          <h3>Automating four repetitive record-keeping tasks</h3>
+          <p>How I take the routine work that eats a day every week — status roll-ups, follow-ups, reminders, reporting — and make it run off one clean data source.</p>
+          <ul class="ex-list">
+            <li>One maintained dataset feeding every output</li>
+            <li>No manual re-keying between files</li>
+            <li>Recurring updates that land on schedule, unprompted</li>
+          </ul>
+          <a class="watch" href="https://youtu.be/kkosecSXDJs" target="_blank" rel="noopener">Watch walkthrough &rarr;</a>
+        </div>
+      </div>
+
+      <!-- Exhibit C -->
+      <div class="ex">
+        <div class="ex-thumb">
+          <!-- Replace with: <img src="images/exhibit-c.jpg" alt="Power BI Compliance Dashboard"> -->
+          Exhibit C — Power BI Dashboard
+        </div>
+        <div class="ex-body">
+          <span class="tag">Reporting</span>
+          <h3>Power BI Compliance Dashboard — in production</h3>
+          <p>The live dashboard built on top of the same maintained dataset, so managers read status in seconds instead of opening the tracker — no manual re-keying, no second version of the numbers.</p>
+          <ul class="ex-list">
+            <li>Built directly off one clean source file</li>
+            <li>Separate staff and manager views</li>
+            <li>Published to mobile for on-the-floor access</li>
+          </ul>
+          <a class="watch" href="https://youtu.be/wij8rbvbdfo" target="_blank" rel="noopener">Watch walkthrough &rarr;</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= TOOLS ================= -->
+<section id="tools">
+  <div class="wrap">
+    <div class="s-label">Tools &amp; Systems</div>
+    <h2>What I already work in</h2>
+    <p class="s-intro">Comfortable in these today, and quick to pick up whatever stack your team runs on.</p>
+
+    <div class="tool-group">
+      <h4>Spreadsheets &amp; Data</h4>
+      <div class="chips">
+        <span class="chip">Microsoft Excel</span>
+        <span class="chip">Google Sheets</span>
+        <span class="chip">Pivot Tables</span>
+        <span class="chip">Data Validation</span>
+        <span class="chip">Conditional Formatting</span>
+        <span class="chip">VLOOKUP / XLOOKUP</span>
+        <span class="chip">Power BI</span>
+      </div>
+    </div>
+
+    <div class="tool-group">
+      <h4>Documents &amp; Presentations</h4>
+      <div class="chips">
+        <span class="chip">Microsoft Word</span>
+        <span class="chip">Google Docs</span>
+        <span class="chip">PowerPoint</span>
+        <span class="chip">Adobe Sign</span>
+        <span class="chip">PDF editing</span>
+      </div>
+    </div>
+
+    <div class="tool-group">
+      <h4>Collaboration &amp; Admin</h4>
+      <div class="chips">
+        <span class="chip">Outlook</span>
+        <span class="chip">Gmail</span>
+        <span class="chip">Microsoft Teams</span>
+        <span class="chip">SharePoint</span>
+        <span class="chip">Google Drive</span>
+        <span class="chip">Microsoft Forms</span>
+      </div>
+    </div>
+
+    <div class="tool-group">
+      <h4>Systems &amp; Platforms</h4>
+      <div class="chips">
+                <span class="chip">Power Automate</span>
+        <span class="chip">Online research databases</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section id="experience">
+  <div class="wrap">
+    <div class="s-label">Background</div>
+    <h2>Where the habits came from</h2>
+    <p class="s-intro">Fifteen-plus years in regulated food manufacturing, where records are examined in roughly ten external and internal audits every year.</p>
+    <div class="tl">
+      <div class="tl-item">
+        <div class="tl-date">February 2025 – May 2026</div>
+        <h3>Production &amp; QA Documents Digitization Transformation Lead (Remote)</h3>
+        <p>Rich Ice Cream Manufacturing — Florida, USA</p>
+        <p>Led the digitization of 40+ production and quality documents, improving retrieval, traceability and version control. Built the trackers, dashboards and automated document saving and sorting workflows in Excel, Power BI and Power Automate. Fully remote, working with a US-based team.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">November 2018 – February 2025</div>
+        <h3>People Development Specialist</h3>
+        <p>Unilever Philippines — Food Manufacturing</p>
+        <p>Continued to own a controlled records system and its audit evidence — preparing the evidence pack for roughly ten audits a year with zero findings, maintaining the SharePoint repository under a three-year retention standard, and building the Power BI dashboard management reported from.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">January 2012 – November 2018</div>
+        <h3>Documentation &amp; Compliance Specialist <em style="font-weight:400;color:var(--amber)">— core experience</em></h3>
+        <p>Unilever Philippines — Food Manufacturing</p>
+        <p>Controlled the site documentation system end to end: issue, revision, controlled distribution and withdrawal of every procedure, work instruction and form, with full version history maintained for audit inspection.</p>
+        <p>Supported internal and external audits directly — retrieving controlled documents and compliance records on demand while auditors were on site — and tracked every corrective action raised through to verified closure. Seven years of this is where the habits in this portfolio come from.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">May 2008 – December 2011</div>
+        <h3>HR Assistant</h3>
+        <p>Unilever Philippines</p>
+        <p>Recruitment and onboarding support, employee records administration, training attendance capture and personnel file maintenance.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Education</div>
+        <h3>BS Psychology — Cavite State University</h3>
+        <p>April 2008</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SETUP ================= -->
+<section id="setup">
+  <div class="wrap">
+    <div class="s-label">Work Setup</div>
+    <h2>Built so downtime isn't your problem</h2>
+    <p class="s-intro">A full-time role needs a setup that shows up every day. Mine has redundancy at every point.</p>
+    <div class="setup">
+      <div class="setup-item"><strong>Internet</strong><span>Wired fiber-optic, 100 Mbps+, with a separate backup connection</span></div>
+      <div class="setup-item"><strong>Computers</strong><span>Two laptops — primary plus a ready backup unit</span></div>
+      <div class="setup-item"><strong>Display</strong><span>Dual monitors for side-by-side data entry and verification</span></div>
+      <div class="setup-item"><strong>Power</strong><span>288 Wh backup power supply for outages</span></div>
+      <div class="setup-item"><strong>Workspace</strong><span>Dedicated quiet home office, noise-cancelling headset</span></div>
+      <div class="setup-item"><strong>Availability</strong><span>Full-time, 8 hrs/day, 5 days/week — flexible to your time zone</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="contact">
+  <div class="wrap">
+    <div class="s-label">Get in touch</div>
+    <h2>Happy to do a paid test task</h2>
+    <p class="s-intro">
+      If it helps you decide, send me a sample data set or research task. You'll see exactly how I work
+      before you commit to anything.
+    </p>
+    <div class="cgrid">
+      <div class="cbox">
+        <span>Email</span>
+        <a href="mailto:zarahflamiano@gmail.com">zarahflamiano@gmail.com</a>
+      </div>
+      <div class="cbox">
+        <span>Phone</span>
+        <a href="tel:+639175062234">+63 917 506 2234</a>
+      </div>
+      <div class="cbox">
+        <span>Location</span>
+        <p>Cavite, Philippines (PHT)</p>
+      </div>
+      <div class="cbox">
+        <span>CV</span>
+        <a href="https://drive.google.com/file/d/1E4c4GDywJcS0-rCrFZU8L2uOc3ILyDF_/view?usp=sharing" target="_blank" rel="noopener">View CV &rarr;</a>
+      </div>
+    </div>
+    <a class="btn btn-main" href="mailto:zarahflamiano@gmail.com?subject=General%20Virtual%20Assistant%20-%20Data%20Entry%20Application">Send me a test task</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">&copy; 2026 Zarah Flamiano &middot; General Virtual Assistant — Data Entry, Document Control &amp; Research</div>
+</footer>
+
+</body>
+</html>
